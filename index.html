@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Timmystroge</title>
+</head>
+<body>
+    <!-- background video -->
+    <video autoplay muted loop id="myVideo">
+        <source src="assets/images/slider-video.mp4 " type="video/mp4">
+    </video>
+    <!--/ background video -->
+
+<div class="container">
+        <img src="assets/images/user-image.jpg" class="img">
+     <div class="slide">
+        <h1>I'm <span class="auto-input"></span> </h1>
+        <P> I am available for new Projects , I have everything you need to <br> launch and grow your Business</P>
+    </div>
+
+    <div class="links">
+        <a id="myBtn" onclick="myFunction()"> Contact me</a>
+        <!-- <button type="button " id="myBtn" onclick="myFunction()"> pasue</button> -->
+        <a href="assets/images/oyetola CV.pdf" class="a2"> Download CV</a>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    var typed = new Typed(".auto-input", {
+        strings: ["TIMMYSTROGE.", " a Web Developer", " a UI Designer"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        loop: true
+    })   
+</script>
+
+<script>
+    // get the video
+     var video = document.getElementById("myVideo");
+    //   get the button
+    var btn = document.getElementById("myBtn");
+
+    //pause and play the video and change the button text
+    function myFunction() {
+        if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+        } else {
+            video.pause();
+            btn.innerHTML = "Play";
+        }
+    }
+
+</script>
+
+</body>
+</html>
